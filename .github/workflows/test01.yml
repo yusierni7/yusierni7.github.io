@@ -2,7 +2,7 @@ name: Mirror Upstream (Force Except Workflows + Index)
 
 on:
   schedule:
-    - cron: "0 */1 * * *"
+    - cron: "0 */4 * * *"
   workflow_dispatch:
 
 permissions:
@@ -39,7 +39,7 @@ jobs:
       - name: Add upstream
         run: |
           git remote remove upstream || true
-          git remote add upstream https://github.com/nengmaya538/nengmaya538.github.io.git
+          git remote add upstream https://github.com/raisfazriansyah722/raisfazriansyah722.github.io.git
           git fetch upstream
 
       - name: Hard reset to upstream
